@@ -53,6 +53,15 @@ def mostrar_menu():
     print("2. Salir")
 
 
+def mostrar_resumen(codigo, nombre, tipo_consulta, descripcion, prioridad):
+    print("\n--- RESUMEN DE LA SOLICITUD ---")
+    print("Código:", codigo)
+    print("Nombre:", nombre)
+    print("Tipo de consulta:", tipo_consulta)
+    print("Descripción:", descripcion)
+    print("Prioridad:", prioridad)
+
+
 def registrar_solicitud():
     print("\n--- REGISTRO DE SOLICITUD ---")
 
@@ -86,12 +95,13 @@ def registrar_solicitud():
 
     prioridad = asignar_prioridad(tipo_consulta)
 
-    print("\n--- SOLICITUD REGISTRADA ---")
-    print("Código:", codigo)
-    print("Nombre:", nombre)
-    print("Tipo de consulta:", tipo_consulta)
-    print("Descripción:", descripcion)
-    print("Prioridad:", prioridad)
+    mostrar_resumen(
+        codigo,
+        nombre,
+        tipo_consulta,
+        descripcion,
+        prioridad
+    )
 
 
 mostrar_menu()
