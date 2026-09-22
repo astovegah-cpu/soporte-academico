@@ -27,6 +27,12 @@ def validar_tipo_consulta(tipo_consulta):
     return False
 
 
+def mostrar_menu():
+    print("\n--- SOPORTE ACADÉMICO ---")
+    print("1. Registrar solicitud")
+    print("2. Salir")
+
+
 def registrar_solicitud():
     print("\n--- REGISTRO DE SOLICITUD ---")
 
@@ -57,4 +63,5 @@ def registrar_solicitud():
     print("Descripción:", descripcion)
 
 
+mostrar_menu()
 registrar_solicitud()
