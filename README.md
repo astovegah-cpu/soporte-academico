@@ -23,3 +23,42 @@ Por ejemplo, la función `mostrar_resumen()` recibe como parámetros el código,
 Las variables utilizadas para registrar una solicitud se encuentran dentro de la función `registrar_solicitud()`, por lo que son variables locales.
 
 El programa evita utilizar variables globales innecesarias y pasa los datos mediante parámetros entre las funciones.
+
+## Pruebas realizadas
+
+| Prueba | Entrada | Resultado esperado | Resultado obtenido |
+|---|---|---|---|
+| 1. Datos válidos | Código válido y matrícula | Registrar solicitud | Correcto |
+| 2. Código vacío | Código vacío | Rechazar código | Correcto |
+| 3. Tipo incorrecto | Tipo "nota" | Rechazar tipo | Correcto |
+| 4. Prioridad alta | Tipo "pagos" | Asignar prioridad Alta | Correcto |
+| 5. Prioridad baja | Tipo "constancia" | Asignar prioridad Baja | Correcto |
+
+Las pruebas permitieron comprobar las validaciones del código, el tipo de consulta y la asignación de prioridades.
+
+## Relación entre funciones y requisitos
+
+| Función | Requisitos relacionados |
+|---|---|
+| `validar_codigo()` | Req. 2 |
+| `validar_tipo_consulta()` | Req. 3 |
+| `mostrar_menu()` | Req. 4 |
+| `asignar_prioridad()` | Req. 5 |
+| `validar_texto()` | Req. 6 |
+| `mostrar_resumen()` | Req. 7 y Req. 8 |
+| `registrar_solicitud()` | Req. 1, Req. 6 y Req. 9 |
+| Estructura `for` del programa principal | Req. 10 |
+
+La función `validar_codigo()` valida que el código no esté vacío y tenga como mínimo 8 caracteres.
+
+La función `validar_tipo_consulta()` comprueba que el tipo de consulta pertenezca a las opciones permitidas.
+
+La función `asignar_prioridad()` devuelve la prioridad según el tipo de consulta.
+
+La función `validar_texto()` comprueba que los campos obligatorios no estén vacíos.
+
+La función `mostrar_resumen()` recibe los datos mediante parámetros y muestra la información registrada.
+
+La función `registrar_solicitud()` reúne los datos de cada solicitud y utiliza las funciones de validación y prioridad.
+
+El programa principal utiliza una estructura `for` para registrar tres solicitudes durante una misma ejecución.
