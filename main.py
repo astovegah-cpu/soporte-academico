@@ -105,4 +105,9 @@ def registrar_solicitud():
 
 
 mostrar_menu()
-registrar_solicitud()
+
+for i in range(3):
+    print("\n--- SOLICITUD", i + 1, "DE 3 ---")
+    registrar_solicitud()
+
+print("\nSe registraron 3 solicitudes correctamente.")
