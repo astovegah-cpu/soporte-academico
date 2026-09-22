@@ -62,3 +62,14 @@ La función `mostrar_resumen()` recibe los datos mediante parámetros y muestra 
 La función `registrar_solicitud()` reúne los datos de cada solicitud y utiliza las funciones de validación y prioridad.
 
 El programa principal utiliza una estructura `for` para registrar tres solicitudes durante una misma ejecución.
+## Resultados de las pruebas
+
+Se realizaron cinco pruebas para comprobar el funcionamiento del sistema:
+
+1. Datos válidos: la solicitud fue registrada correctamente.
+2. Código vacío: el sistema rechazó el código y solicitó ingresarlo nuevamente.
+3. Tipo incorrecto: el sistema rechazó el tipo "nota" y solicitó un tipo válido.
+4. Prioridad alta: el tipo "pagos" obtuvo prioridad Alta.
+5. Prioridad baja: el tipo "constancia" obtuvo prioridad Baja.
+
+Las pruebas fueron realizadas ejecutando el programa y verificando manualmente los resultados obtenidos.
