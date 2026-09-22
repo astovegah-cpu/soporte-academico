@@ -27,6 +27,19 @@ def validar_tipo_consulta(tipo_consulta):
     return False
 
 
+def asignar_prioridad(tipo_consulta):
+    if tipo_consulta == "matricula":
+        return "Alta"
+
+    if tipo_consulta == "pagos":
+        return "Alta"
+
+    if tipo_consulta == "plataforma":
+        return "Alta"
+
+    return "Baja"
+
+
 def mostrar_menu():
     print("\n--- SOPORTE ACADÉMICO ---")
     print("1. Registrar solicitud")
@@ -56,11 +69,14 @@ def registrar_solicitud():
 
     descripcion = input("Ingrese una descripción breve: ")
 
+    prioridad = asignar_prioridad(tipo_consulta)
+
     print("\n--- SOLICITUD REGISTRADA ---")
     print("Código:", codigo)
     print("Nombre:", nombre)
     print("Tipo de consulta:", tipo_consulta)
     print("Descripción:", descripcion)
+    print("Prioridad:", prioridad)
 
 
 mostrar_menu()
