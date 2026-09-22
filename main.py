@@ -40,6 +40,13 @@ def asignar_prioridad(tipo_consulta):
     return "Baja"
 
 
+def validar_texto(texto):
+    if texto == "":
+        return False
+
+    return True
+
+
 def mostrar_menu():
     print("\n--- SOPORTE ACADÉMICO ---")
     print("1. Registrar solicitud")
@@ -57,6 +64,10 @@ def registrar_solicitud():
 
     nombre = input("Ingrese nombre del estudiante: ")
 
+    while not validar_texto(nombre):
+        print("El nombre no puede estar vacío.")
+        nombre = input("Ingrese nombre del estudiante: ")
+
     tipo_consulta = input(
         "Ingrese tipo de consulta (matricula, pagos, constancia, plataforma u otro): "
     ).lower()
@@ -68,6 +79,10 @@ def registrar_solicitud():
         ).lower()
 
     descripcion = input("Ingrese una descripción breve: ")
+
+    while not validar_texto(descripcion):
+        print("La descripción no puede estar vacía.")
+        descripcion = input("Ingrese una descripción breve: ")
 
     prioridad = asignar_prioridad(tipo_consulta)
 
